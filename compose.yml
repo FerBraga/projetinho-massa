@@ -5,7 +5,7 @@ services:
     restart: always
     network_mode: host
     env_file:
-      - .env
+      - .env.development
     volumes:
       - postgres-data:/var/lib/postgresql/data
 
