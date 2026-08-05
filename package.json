@@ -4,9 +4,11 @@
   "description": "Repositório para um projetinho do curso.dev do Felipe Deschamps.",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run services:up && next dev",
     "build": "next build",
     "start": "next start",
+    "services:up": "docker compose up -d",
+    "services:down": "docker compose down",
     "lint:check": "prettier --check .",
     "lint:fix": "prettier --write .",
     "test": "jest",
